@@ -97,6 +97,7 @@ def all_students_tuple_list(filename):
     student_list = []
 
     # Code goes here
+    student_list = student_tuple[filename]
 
     return student_list
 
@@ -180,6 +181,7 @@ def find_house_members_by_student_name(student_list):
      """
 
     # Code goes here
+    student = input("What's the student's name? > ")
 
     return
 
@@ -187,8 +189,8 @@ def find_house_members_by_student_name(student_list):
 #############################################################################
 # Here is some useful code to run these functions without doctests!
 
-# find_cohort_by_student_name(all_students_data)
-# find_house_members_by_student_name(all_students_data)
+find_cohort_by_student_name(all_students_data)
+find_house_members_by_student_name(all_students_data)
 
 
 ##############################################################################
