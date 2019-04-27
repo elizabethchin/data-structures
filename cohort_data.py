@@ -16,7 +16,6 @@ def unique_houses(filename):
     # Code goes here
     houses = set()
 
-
     cohort_data = open(filename)
     for line in cohort_data:
     	line = line.rstrip()
@@ -122,9 +121,13 @@ def find_cohort_by_student_name(student_list):
 
     """
 
-    # Code goes here
 
-    return "Student not found."
+    # Code goes here
+    name = input("Who are you looking for?")
+    if name in student_list:
+    	return (name + "was in the" + cohort )
+    else:
+    	return "Student not found."
 
 
 ##########################################################################################
