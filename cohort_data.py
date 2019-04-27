@@ -14,23 +14,19 @@ def unique_houses(filename):
 
     """
     # Code goes here
+    houses = set()
+
+
     cohort_data = open(filename)
     for line in cohort_data:
     	line = line.rstrip()
-    	houses = line.split('|')
-
-    	first_name = houses[0]
-    	last_name = houses[1]
-    	house = houses[2]
-    	advisor = houses[3]
-    	cohort = houses[4]
-
-    houses = set()
-
+    	split_lines = line.split('|')
+    	if split_lines[2]: 
+    		houses = houses.add(split_lines[2])
+    
     cohort_data.close()
 
     return houses
-unique_houses('chort_data.txt')
 
 def sort_by_cohort(filename):
     """TODO: Return a list of all cohort lists, including ghosts but not instructors.
